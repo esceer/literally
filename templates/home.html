@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Literally</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      #banner_upper_div {
+        padding: 3px 10px;
+        background-color: purple;
+        margin: 20px 5px 3px 5px;
+      }
+      #banner_lower_div {
+        padding: 29px 10px;
+        background-color: purple;
+        margin: 0 5px 20px 5px;
+      }
+      #drawn_word_div {
+        padding: 0 10px;
+        text-align: left;
+        margin: 20px 5px 0 5px;
+      }
+      .footer {
+        padding: 15px 12px;
+        text-align: left;
+        background-color: lightblue;
+        margin: 20px 5px;
+      }
+      #translation_div {
+        visibility: hidden;
+        font-size: 30px;
+      }
+      #translation {
+        font-size: 30px;
+        vertical-align:middle;
+      }
+      #translation_label {
+        font-size: 20px;
+        vertical-align:middle;
+      }
+      #secondary_text {
+        height:100px;
+        line-height:100px;
+      }
+      input[type=button],
+      input[type=submit] {
+        background-color: #62529c;
+        border: none;
+        color: #fff;
+        padding: 15px 30px;
+        text-decoration: none;
+        margin: 10px 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div id="banner_upper_div"></div>
+      <div id="banner_lower_div"></div>
+    </div>
+
+    <div id="drawn_word_div">
+      <h1>{{drawn_word}}</h1>
+    </div>
+
+    <div class="footer">
+      <div id="translation_div">
+        <div class="seconday_text">
+          <span id="translation_label">Translation:</span>
+          <span id="translation">{{translation}}</span>
+        </div>
+      </div>
+    </div>
+
+    <table>
+      <tr>
+        <td>
+          <form method="GET" action="/literally/korean">
+            <input type="submit" value="Draw a word">
+            <input type="button" value="Translate" onclick="toggle_translation()">
+          </form>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      function toggle_translation() {
+        var x = document.getElementById("translation_div");
+        x.style.visibility = "visible";
+      }
+    </script>
+  </body>
+</html>

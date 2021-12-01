@@ -1,0 +1,16 @@
+사과,apple
+방,room
+여자,woman
+남자,man
+공원,park
+자동차,car
+연필,pencil
+고양이,cat
+개,dog
+동물,animal
+사람,person
+빵,bread
+장소,place
+집,house
+학교,school
+책,book
