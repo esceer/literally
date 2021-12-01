@@ -1,0 +1,12 @@
+Freizeit,szabadido
+Geburtsort,szuletesi hely
+Geburtsdatum,szuletesi ido
+Bezirke,kerulet
+das Schiff -e,hajo
+der Hafen,kikoto
+das Meer / die See,tenger
+der Fluss,folyo
+der Zug / die Bahn,vonat
+Brücke,hid
+besucher,latogato
+klopften,kopogni
