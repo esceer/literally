@@ -50,6 +50,10 @@
         margin: 10px 2px;
         cursor: pointer;
       }
+      #error_icon {
+        width: 25px;
+        padding: 0 0 10px 5px;
+      }
     </style>
   </head>
   <body>
@@ -71,16 +75,13 @@
       </div>
     </div>
 
-    <table>
-      <tr>
-        <td>
-          <form method="GET" action="/literally/{{language}}">
-            <input type="submit" value="Draw a word">
-            <input type="button" value="Translate" onclick="toggle_translation()">
-          </form>
-        </td>
-      </tr>
-    </table>
+    <form method="GET" action="/literally/{{language}}">
+      <input type="submit" value="Draw a word">
+      <input type="button" value="Translate" onclick="toggle_translation()">
+      {% if schema_error %}
+          <img id="error_icon" src="{{url_for('static', filename='error_icon.png')}}" title="Dictionary has invalid schema." align="middle"/>
+      {% endif %}
+    </form>
 
     <script>
       function toggle_translation() {

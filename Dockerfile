@@ -7,6 +7,7 @@ RUN mkdir dictionaries
 
 COPY requirements.txt ./
 COPY templates ./templates
+COPY static ./static
 COPY literally.py .
 
 RUN pip install -r requirements.txt
