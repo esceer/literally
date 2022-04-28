@@ -1,9 +1,11 @@
 import os
+import pyttsx3
 import random
 
 from flask import Flask
 from flask import redirect
 from flask import render_template
+from flask import request
 
 project_dir = os.path.dirname(os.path.abspath(__file__))
 dictionaries_dir = os.path.join(project_dir, "dictionaries")
@@ -37,6 +39,13 @@ def draw_word(language):
                            translation=translation,
                            language=language,
                            schema_error=schema_error)
+
+
+#@app.post("/literally/tts")
+@app.get("/literally/tts/<text>")
+def text_to_speech(text):
+    #text = request.form['text-to-speech']
+    pyttsx3.speak(text)
 
 
 def load_dictionary(language):
